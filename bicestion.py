@@ -3,6 +3,9 @@ temp = count = c_now = c_past = 0
 c = 0
 toleransi_error = 0
 
+def cetak_nilai_c():
+    print('\nnilai C keseluruhan')
+    print(nilai_c)
 
 ### function yang diketahui
 def f(x):
@@ -23,6 +26,7 @@ def cek_konvergen(x_now, x_past):
         print(selisih, ' < 10^-5')
         if selisih <= 0.000099:
             print('konvergen')
+            cetak_nilai_c()
             exit(0)
         else:
             print('belum konvergen')
@@ -65,6 +69,7 @@ def bisection(a, b):
         cek_konvergen(c_now, c_past)
 
     if count == 1000:
+        cetak_nilai_c()
         quit()
 
     return (a, b)
@@ -79,6 +84,3 @@ while True:
     i += 1
     print((('=') * 20), 'iterasi ke ', i, ('=') * 20)
     a, b = bisection(a, b)
-
-print('nilai C keseluruhan')
-print(nilai_c)
