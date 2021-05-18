@@ -41,7 +41,6 @@ def bisection(a, b):
         temp = c
 
     c = (a + b) / 2
-    # print('~~~~~~~~~~~~~~~~~~~~~~~~~~ NILAI C~~~~~~~~~~~~~~~~~~~~~~~~~~~ : ', c)
     f_a = f(a)
     f_b = f(b)
     f_c = f(c)
