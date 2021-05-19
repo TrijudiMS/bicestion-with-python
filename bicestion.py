@@ -24,7 +24,7 @@ def cek_konvergen(x_now, x_past):
     if toleransi_error == 3:
         print('toleransi_error sudah mencapai nilai ke-3, mulai pengecekan konvergen')
         print(selisih, ' < 10^-5')
-        if selisih <= 0.000099:
+        if selisih <= pow(10, -5):
             print('konvergen')
             cetak_nilai_c()
             exit(0)
